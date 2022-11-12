@@ -1,14 +1,16 @@
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import Confetti from "react-confetti";
+import { useState, useEffect } from "react";
+
 export default function Success() {
   const routers = useRouter();
   const [pieces, setPieces] = useState(200);
 
   const stopConfetti = () => {
     setTimeout(() => {
-      setPieces(0), 3000;
-    });
+      setPieces(0);
+    }, 3000);
   };
   useEffect(() => {
     stopConfetti;
